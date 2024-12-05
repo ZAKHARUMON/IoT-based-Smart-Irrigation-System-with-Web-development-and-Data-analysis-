@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/images.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: #4caf50;
+  padding: 20px;
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.gauge-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.gauge-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.gauge {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.rain-status {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+#rainText {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.pump-status {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+#pumpText {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.chart-container {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.historical-data {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#historicalDataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#historicalDataTable th,
+#historicalDataTable td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+#historicalDataTable th {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Hover Effects */
+.gauge-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode header {
+  background-color: #222;
+}
+
+body.dark-mode .gauge-item {
+  background-color: #444;
+  color: #fff;
+}

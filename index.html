@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Monitoring Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-gauges"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Plant Monitoring Dashboard</h1>
+      <p>Track the soil moisture, temperature, humidity, and rain status of your plants in real-time!</p>
+    </header>
+
+    <div id="gauges" class="gauge-container">
+      <div class="gauge-item">
+        <canvas id="soilMoistureGauge" class="gauge"></canvas>
+        <p>Soil Moisture (%)</p>
+      </div>
+      <div class="gauge-item">
+        <canvas id="temperatureGauge" class="gauge"></canvas>
+        <p>Temperature (°C)</p>
+      </div>
+      <div class="gauge-item">
+        <canvas id="humidityGauge" class="gauge"></canvas>
+        <p>Humidity (%)</p>
+      </div>
+    </div>
+
+    <div id="rainStatus" class="rain-status">
+      <p><strong>Rain Status: </strong><span id="rainText">No data</span></p>
+    </div>
+
+    <div id="pumpStatus" class="pump-status">
+      <p><strong>Pump Status: </strong><span id="pumpText">OFF</span></p>
+    </div>
+
+    <div id="chartContainer" class="chart-container">
+      <canvas id="dataChart"></canvas>
+    </div>
+
+    <div id="historicalDataContainer" class="historical-data">
+      <h2>Historical Data</h2>
+      <table id="historicalDataTable">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Soil Moisture</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Rain Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
